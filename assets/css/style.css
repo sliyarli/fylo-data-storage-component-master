@@ -1,0 +1,168 @@
+* {
+  border: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  resize: none;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--very-dark-blue) url("../../images/bg-desktop.png") no-repeat
+    center bottom / contain !important;
+  background-position: 0px 285px !important;
+}
+
+.row {
+  margin: auto 0 !important;
+}
+
+:root {
+  /* Primary Colors */
+  --gradient-start: #ffa399;
+  --gradient-end: #ff4d97;
+
+  /* Neutral Colors */
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+.fylo-control-center,
+.fylo-storage {
+  background-color: var(--dark-blue);
+  border-radius: 15px;
+}
+
+.fylo-control-center {
+  border-top-right-radius: 120px;
+}
+
+.fylo-links a {
+  background-color: var(--very-dark-blue);
+  padding: 10px 11px;
+  border-radius: 10px;
+}
+
+.fylo-storage-info {
+  padding: 30px 20px;
+}
+
+.fylo-storage p {
+  color: var(--pale-blue);
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.fylo-storage p span {
+  color: #ffff;
+  font-weight: 500;
+}
+
+.progress-border,
+.progress-bar {
+  border-radius: 20px;
+}
+
+.progress-border {
+  background-color: hsl(229, 54%, 18%);
+  padding: 3px;
+  position: relative;
+}
+
+.progress-bar {
+  height: 13px;
+  width: 70%;
+  background: rgb(255, 163, 153);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(255, 163, 153, 1)),
+    to(rgba(255, 77, 151, 1))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(255, 163, 153, 1) 0%,
+    rgba(255, 77, 151, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(255, 163, 153, 1) 0%,
+    rgba(255, 77, 151, 1) 100%
+  );
+}
+
+.storage-capacity p {
+  font-weight: 700;
+}
+
+.talk-bubble {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: -100px;
+  width: 140px;
+  height: 60px;
+  background-color: #feffff;
+  border-radius: 9px;
+  border-bottom-right-radius: 0;
+}
+
+.tri-right.btm-right:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: 0px;
+  bottom: -20px;
+  border: 12px solid;
+  border-color: #feffff #feffff transparent transparent;
+}
+
+.talktext p,
+.talktext span {
+  font-weight: 700 !important;
+}
+
+.talktext p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 5px;
+  color: var(--grayish-blue) !important;
+  margin: 0;
+}
+
+.talktext span {
+  font-size: 30px;
+  color: var(--very-dark-blue) !important;
+}
+
+@media (max-width: 992px) {
+  body {
+    background: var(--very-dark-blue) url("../../images/bg-mobile.png")
+      no-repeat center bottom / cover !important;
+  }
+  .talk-bubble {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: -100px;
+    top: auto;
+  }
+  .tri-right.btm-right:after {
+    display: none;
+  }
+  .talk-bubble {
+    border-bottom-right-radius: 9px;
+  }
+}
